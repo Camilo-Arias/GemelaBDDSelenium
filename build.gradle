@@ -1,0 +1,75 @@
+
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url = uri('https://repo.maven.apache.org/maven2/')
+    }
+    maven {
+        url 'https://pkgs.dev.azure.com/DEV-FormacionCH/f11a2ddb-f565-44a3-8710-e9e1472d29ee/_packaging/Choucair/maven/v1'
+    }
+}
+
+dependencies {
+    api 'net.serenity-bdd:serenity-core:3.9.0'
+    api 'net.serenity-bdd:serenity-junit:3.9.0'
+    testImplementation 'net.serenity-bdd:serenity-cucumber:3.9.0'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.slf4j:slf4j-simple:2.0.7'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+description = 'SauceSerenity'
+java.sourceCompatibility = JavaVersion.VERSION_17
+java.targetCompatibility = JavaVersion.VERSION_17
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from(components.java)
+        }
+    }
+}
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Javadoc) {
+    options.encoding = 'UTF-8'
+}
+
+//task generarPDF(type: JavaExec){
+//    mainClass = 'utils/GeneradorPDF'
+//    classpath = sourceSets.main.runtimeClasspath
+//    doLast {
+//        println 'Reportes Creados en PDF Exitoso.'
+//    }
+//}
+
+task cleanMvn(type: Exec){
+    commandLine('D:/apache-maven-3.9.4-bin/apache-maven-3.9.4/bin/mvn.cmd', 'clean')
+}
+
+tasks.test.dependsOn cleanMvn
+
+task serenityAggregate(type: Exec){
+
+    commandLine('D:/apache-maven-3.9.4-bin/apache-maven-3.9.4/bin/mvn.cmd', 'serenity:aggregate')
+}
+
+test.finalizedBy(serenityAggregate)
+
+
+test {
+    systemProperty "environment",
+    System.properties["environment"]
+}
+
