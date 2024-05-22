@@ -4,13 +4,19 @@ import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HConsultMedPages extends PageObject {
+public class HConsultMedPages {
 
     @FindBy(id = "tipo_identificacion")
     protected WebElement typeDocumentHC;
 
+    @FindBy(id = "tipo_identificacion_1")
+    protected WebElement typeDocumentHCInc;
+
     @FindBy(id = "documento")
     protected WebElement inputDocumentHC;
+
+    @FindBy(id = "documento_1")
+    protected WebElement inputDocumentHCInc;
 
     @FindBy(xpath = "//input[@value='Buscar']")
     protected WebElement btnSearch;

@@ -46,6 +46,16 @@ public class OptionSystemDef {
         optionSystemStep.clickBtnHCNotas();
     }
 
+    @When("selecciono Incapacidades")
+    public void selecciono_Incapacidades() {
+        optionSystemStep.clickBtnHCIncapacidades();
+    }
+
+    @When("selecciono Seguimiento")
+    public void selecciono_Seguimiento() {
+        optionSystemStep.clickBtnHCSeguimiento();
+    }
+
     /**
      * Reporte AT botones y acciones*/
     @When("Selecciono Reporte AT")

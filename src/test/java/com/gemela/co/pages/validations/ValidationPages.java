@@ -30,6 +30,9 @@ public class ValidationPages extends PageObject {
     @FindBy(xpath = "(//img[@Alt='Generar Reporte'])[1]")
     protected WebElement genReport;
 
+    @FindBy(xpath = "(//img[@Alt='editar'])[2]")
+    protected WebElement genReportIncapacidades;
+
     @FindBy(id = "listSiniestros_next")
     protected WebElement btnNextListAT;
 }

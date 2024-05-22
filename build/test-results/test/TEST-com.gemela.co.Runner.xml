@@ -21,6 +21,6 @@
 [Test worker] INFO  - Test Suite Started: CP01 - Inicio sesión
 [Test worker] INFO  - Test Suite Started: CP02 - Consultar Derechos Accidente de Trabajo
 [Test worker] INFO  - Test Suite Started: CP04 - Consultar Datos Basicos Historia Clinica
-[Test worker] INFO  - Test Suite Started: CP01 - Inicio sesión
+[Test worker] INFO  - Test Suite Started: CP04 - Consultar Datos Basicos Historia Clinica
 ]]></system-err>
 </testsuite>

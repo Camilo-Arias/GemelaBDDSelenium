@@ -18,9 +18,6 @@ public class LoginPage extends PageObject {
     @FindBy(id = "loginbtnIni")
     protected WebElement btnLogin;
 
-    @FindBy(xpath = "//a[.='Salir']")
-    protected WebElement btnLogout;
-
     @FindBy(id = "botonSalir")
     protected WebElement divBTNLogout;
 

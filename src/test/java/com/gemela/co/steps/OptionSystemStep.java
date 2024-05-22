@@ -3,13 +3,24 @@ package com.gemela.co.steps;
 //import com.gemela.co.pages.LoginPage;
 import com.gemela.co.pages.OptionSystemPage;
 import net.thucydides.core.annotations.Step;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 //import org.openqa.selenium.WebElement;
 //import org.openqa.selenium.support.FindBy;
 
 public class OptionSystemStep extends OptionSystemPage {
 
+    public void waitForElementToBeVisible(WebElement webElement) {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(60));
+        wait.until(ExpectedConditions.elementToBeClickable(webElement));
+    }
+
     @Step("Click en el boton OPCIONES DEL SISTEMA")
     public void clickbtnOption() {
+        waitForElementToBeVisible(btnOption);
         btnOption.click();
     }
 

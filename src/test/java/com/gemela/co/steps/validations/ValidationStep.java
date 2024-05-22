@@ -39,6 +39,11 @@ public class ValidationStep extends ValidationPages {
         return genReport.isDisplayed();
     }
 
+    @Step("Validar listado HC Incapacidades")
+    public boolean btnPdfHCInc() {
+        return genReportIncapacidades.isDisplayed();
+    }
+
     //Reporte Accidentes de trabajo
 
     @Step("Validar Registro Siniestro")
