@@ -54,4 +54,6 @@ public class HConsultMedDef extends HConsultMedPages {
     public void El_sistema_trae_el_listado_Resultado_Incapacidades() {
         Assert.assertTrue(validationStep.btnPdfHCInc());
     }
+
+//
 }

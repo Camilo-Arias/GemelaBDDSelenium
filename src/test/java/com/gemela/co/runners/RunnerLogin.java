@@ -1,4 +1,4 @@
-package com.gemela.co;
+package com.gemela.co.runners;
 
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com/gemela/co/definitions",
-        tags = "@HCConsultaIncTemp"
+        tags = "@Login"
 )
 
-public class Runner {
+public class RunnerLogin {
 }

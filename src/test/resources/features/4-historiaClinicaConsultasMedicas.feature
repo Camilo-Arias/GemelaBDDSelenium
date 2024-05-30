@@ -7,7 +7,7 @@ Feature: CP04 - Consultar Datos Basicos Historia Clinica
 
 
   @ConsultarHC
-  Scenario Outline: 3.1 - Consultar Listado Historias Clinicas
+  Scenario Outline: 4.1 - Consultar Listado Historias Clinicas
     When lleno formulario de "<user>" and "<password>"
     And  solución capchat
     And el logueo es exitoso
@@ -24,7 +24,7 @@ Feature: CP04 - Consultar Datos Basicos Historia Clinica
       | cariasa | Colpatria1 | CEDULA CIUDADANIA | 123456               |
 
   @HCConcAptLab
-  Scenario Outline: 3.2 - Concepto de Aptitud labotal
+  Scenario Outline: 4.2 - Concepto de Aptitud labotal
     When lleno formulario de "<user>" and "<password>"
     And solución capchat
     And el logueo es exitoso
@@ -41,7 +41,7 @@ Feature: CP04 - Consultar Datos Basicos Historia Clinica
       | cariasa | Colpatria1 | CEDULA CIUDADANIA | 123456               |
 
   @HCActaIncProRehabilitacion
-  Scenario Outline: 3.3 - Concepto de Aptitud labotal
+  Scenario Outline: 4.3 - Concepto de Aptitud labotal
     When lleno formulario de "<user>" and "<password>"
     And solución capchat
     And el logueo es exitoso
@@ -58,7 +58,7 @@ Feature: CP04 - Consultar Datos Basicos Historia Clinica
       | cariasa | Colpatria1 | CEDULA CIUDADANIA | 123456               |
 
   @HCNotas
-  Scenario Outline: 3.4 - Notas
+  Scenario Outline: 4.4 - Notas
     When lleno formulario de "<user>" and "<password>"
     And solución capchat
     And el logueo es exitoso
@@ -75,7 +75,7 @@ Feature: CP04 - Consultar Datos Basicos Historia Clinica
       | cariasa | Colpatria1 | CEDULA CIUDADANIA | 123456               |
 
   @HCIncapacidades
-  Scenario Outline: 3.5 - Incapacidades
+  Scenario Outline: 4.5 - Incapacidades
     When lleno formulario de "<user>" and "<password>"
     And solución capchat
     And el logueo es exitoso
@@ -92,7 +92,7 @@ Feature: CP04 - Consultar Datos Basicos Historia Clinica
       | cariasa | Colpatria1 | CEDULA CIUDADANIA | 123456               |
 
   @HCSeguimiento
-  Scenario Outline: 3.6 - Seguimiento
+  Scenario Outline: 4.6 - Seguimiento
     When lleno formulario de "<user>" and "<password>"
     And solución capchat
     And el logueo es exitoso
@@ -103,6 +103,22 @@ Feature: CP04 - Consultar Datos Basicos Historia Clinica
     And Ingreso "<NumberIdentification>"
     And Selecciono buscar
     Then El sistema trae el listado
+
+    Examples:
+      | user    | password   | TypeDocument      | NumberIdentification |
+      | cariasa | Colpatria1 | CEDULA CIUDADANIA | 123456               |
+
+  @HCConsultaIncTemp
+  Scenario Outline: 4.7 - Consultar Incap. Temp.
+    When lleno formulario de "<user>" and "<password>"
+    And solución capchat
+    And el logueo es exitoso
+    And Selecciono el menu Opciones del sistema
+    And Selecciono HISTORIA CLINICA
+    And selecciono Consulta Incap. Temp.
+#    And Cargo el archivo valido.
+#    And Selecciono buscar
+#    Then El sistema trae el listado incapacadidad temporal.
 
     Examples:
       | user    | password   | TypeDocument      | NumberIdentification |

@@ -29,8 +29,6 @@ public class HConsultMedStep extends HConsultMedPages {
         }
     }
 
-
-
     public void quitarBordearElemento(WebElement webLocalizador) {
         try {
             ((JavascriptExecutor) getDriver()).executeScript("arguments[0].style.border=''",
@@ -72,4 +70,9 @@ public class HConsultMedStep extends HConsultMedPages {
     public void clickSearchHT() {
         btnSearch.click();
     }
+
+//    @Step("Click en Ver historia Clinica")
+//    public void clickVrHClinica() {
+//        vrHistClin.click();
+//    }
 }

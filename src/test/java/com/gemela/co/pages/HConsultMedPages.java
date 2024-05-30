@@ -38,4 +38,6 @@ public class HConsultMedPages extends PageObject {
 
     @FindBy(xpath = "//input[@value='Ver Notas']")
     protected WebElement vrNotas;
+
+
 }

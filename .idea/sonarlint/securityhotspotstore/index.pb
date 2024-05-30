@@ -27,12 +27,8 @@ e
 5src/test/java/com/gemela/co/definitions/LoginDef.java,2\6\26b654b6291aa2d7016ac7dcf653dbd40c450930
 `
 0src/test/java/com/gemela/co/steps/LoginStep.java,d\3\d3c0ac57cb7ceda4d902dcb401583c75b7b63f12
-_
-/src/test/java/com/gemela/co/runners/Runner.java,9\9\996ea8ecfa9bacd0a308e78d48e323a95a420851
 k
 ;src/test/java/com/gemela/co/definitions/HConsultMedDef.java,a\0\a0a795161ba742d907e3e5520b9c043000961bdb
-i
-9src/test/java/com/gemela/co/runners/RunnerConsultMed.java,3\e\3e5326ab349f65a0ddc6f9627b7dba2924d2e847
 q
 Asrc/test/java/com/gemela/co/steps/validations/ValidationStep.java,9\9\99957eda79fa23b0524458985b366ac2cec01ae3
 r
@@ -40,3 +36,5 @@ Bsrc/test/java/com/gemela/co/pages/validations/ValidationPages.java,d\a\da849f7
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+d
+4src/test/java/com/gemela/co/runners/RunnerLogin.java,1\a\1ad139d98e54990bfd10aca54a5dcacfd1459478

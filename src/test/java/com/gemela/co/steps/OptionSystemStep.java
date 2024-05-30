@@ -26,6 +26,7 @@ public class OptionSystemStep extends OptionSystemPage {
 
     @Step("Click en el boton HISTORIA CLINICA")
     public void clickbtnHClinica() {
+        waitForElementToBeVisible(btnHClinica);
         btnHClinica.click();
     }
 

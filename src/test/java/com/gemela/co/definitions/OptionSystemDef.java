@@ -56,6 +56,11 @@ public class OptionSystemDef {
         optionSystemStep.clickBtnHCSeguimiento();
     }
 
+    @Then("selecciono Consulta Incap. Temp.")
+    public void selecciono_ConsultaIncap_Temp() {
+        optionSystemStep.clickBtnHCConsIncapTemp();
+    }
+
     /**
      * Reporte AT botones y acciones*/
     @When("Selecciono Reporte AT")
