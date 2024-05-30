@@ -9,8 +9,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com/gemela/co/definitions",
-        tags = "@HCSeguimiento"
+        tags = ""
 )
 
 public class Runner {
+//
 }

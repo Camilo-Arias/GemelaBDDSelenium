@@ -16,6 +16,11 @@ public class LoginStep extends LoginPage {
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(60));
         wait.until(ExpectedConditions.elementToBeClickable(webElement));
     }
+
+    public void openPageURL(String url) {
+        getDriver().get(url);
+    }
+
     @Step("Ingresar usuario")
     public void typeUser(String user) {
         inputUser.sendKeys(user);

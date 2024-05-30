@@ -4,7 +4,7 @@ import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HConsultMedPages {
+public class HConsultMedPages extends PageObject {
 
     @FindBy(id = "tipo_identificacion")
     protected WebElement typeDocumentHC;

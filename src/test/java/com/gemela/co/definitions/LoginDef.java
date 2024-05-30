@@ -8,9 +8,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 //import net.serenitybdd.annotations.Steps;
 import net.thucydides.core.annotations.Steps;
+import net.thucydides.core.util.EnvironmentVariables;
 import org.junit.Assert;
 
 public class LoginDef {
+
+    private EnvironmentVariables environmentVariables;
 
     @Steps(shared = true)
     LoginStep loginStep;
@@ -20,8 +23,9 @@ public class LoginDef {
 
     @Given("el usuario navega en dc2tvaweb7:3089GemelaLogin")
     public void el_usuario_navega_en_dc2tvaweb7_gemela_login() {
-        loginStep.open();
-//        url.navigateTo("http://dc2tvaweb7:3089/Gemela/Login");
+//        loginStep.open();
+        String currentURL = environmentVariables.optionalProperty("environments.qa.webdriver.base.url").get();
+        loginStep.openPageURL(currentURL);
     }
 
     @When("lleno formulario de {string} and {string}")
